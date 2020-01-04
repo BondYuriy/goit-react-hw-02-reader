@@ -11,8 +11,13 @@ export default class Reader extends Component {
   };
 
   static propTypes = {
-    // eslint-disable-next-line react/forbid-prop-types
-    items: PropTypes.array,
+    items: PropTypes.arrayOf(
+      PropTypes.shape({
+        text: PropTypes.string.isRequired,
+        title: PropTypes.string.isRequired,
+        id: PropTypes.string.isRequired,
+      }).isRequired,
+    ),
   };
 
   state = { publicationIndex: 0 };
