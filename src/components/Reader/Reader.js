@@ -63,7 +63,11 @@ export default class Reader extends Component {
           currentPage={publicationIndex + 1}
           totalPages={arrayLength(items)}
         />
-        <Publication title={title} text={text} />
+        <Publication
+          title={title}
+          text={text}
+          currentPage={publicationIndex + 1}
+        />
       </div>
     );
   }

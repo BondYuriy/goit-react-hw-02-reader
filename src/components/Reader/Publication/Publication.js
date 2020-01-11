@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Publication = ({ title, text }) => (
+const Publication = ({ title, text, currentPage }) => (
   <article>
-    <h2>{title}</h2>
+    <h2>{`${currentPage}. ${title}`}</h2>
     <p>{text}</p>
   </article>
 );
@@ -11,6 +11,7 @@ const Publication = ({ title, text }) => (
 Publication.propTypes = {
   title: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
+  currentPage: PropTypes.number.isRequired,
 };
 
 export default Publication;
